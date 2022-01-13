@@ -1,0 +1,247 @@
+*{margin: 0;
+    padding: 0;
+    font-family: sans-serif;}
+
+.banner{width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url(photos/potsdam/san\ cu\ si.jpg);
+        background-size: cover;
+        background-position: center;}
+
+.navbar{width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between}
+        
+.picture{width: 120px;
+        cursor:pointer;}
+
+.navbar ul li{list-style: none;
+             display: inline-block;
+             margin: 0 20px;
+             position: relative;}
+
+.navbar ul li a{text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;}
+
+.navbar ul li::after{content: '';
+                    height: 3px;
+                    width: 0;
+                    background: #009688;
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.5s;}
+        
+.navbar ul li:hover::after{width: 100%;}
+
+.content{width: 100%;
+    color: #fff;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-50%);}
+
+.content h1{font-size: 65px;
+            margin-top: 160px;}
+
+.content p{margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;}
+
+.button{ width: 200px;
+         padding: 15px 0;
+         text-align: center;
+         margin: 20px 10px;
+         border-radius: 25px;
+         font-weight: bold;
+         border: 2px solid #009688 ;
+         background: transparent ;
+         color: #fff;
+         cursor: pointer;
+         position: relative;
+         overflow: hidden;}
+
+.span{background: #009688;
+     height: 100%;
+     width: 0;
+     border-radius: 25px;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     z-index: -1;
+     transition: 0.5s;}
+
+.button:hover span{width: 100%;}
+
+.button:hover{border: none}
+
+.hero-bth{display: inline-block;
+    text-decoration: center;
+    color: #04302c;
+    border: 2px solid #009688;
+    padding: 5px 10px;
+    font-size: 26px;
+    border-radius: 25px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;}
+
+.hero-bth:hover{border: 2px solid #7ddbd2;
+            background: #7ddbd2;
+            transition: 1s;}
+
+
+
+.p{text-align: left;
+    font-family:'Times New Roman', Times, serif;
+    padding: 30px 0px;
+    font-size: 20px;
+    padding-left: 30px;}
+
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+.title > p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+
+
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+
+
+
+
+
+/* Sanssouci Palace */
+.san {
+    padding: 20px 0px;
+}
+.san-text {
+    margin: 2rem 0;
+}
+.san-text  p  {
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+
+/* new */
+.new{
+    padding: 40px 20px;
+}
+.new-text{
+    margin: 2rem 0;
+}
+.new-text  p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+
+.new {
+    background: #edf7f7;
+    padding: 30px 10px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .banner-title{
+        font-size: 5rem;
+    }
+    .banner form{
+        margin-top: 1.4rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 600px) {
+    .navbar {
+        flex: 50%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .navbar {
+        flex: 25%;
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .design-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .design-item{
+        margin: 0;
+    }
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .blog-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .san-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+    .new-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .design-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
